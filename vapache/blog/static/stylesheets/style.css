@@ -1,6 +1,16 @@
 .jumbotron {
   background-color: #d74854;
+  margin: 0em;
 }
-body {
+.container {
   background-color: #e4848d;
+}
+.navbar ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  background-color: #e4848d;
+}
+.navbar ul :focus {
+  background-color: #d74854;
 }

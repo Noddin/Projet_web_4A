@@ -9,6 +9,12 @@ def index(request):
 
     return render(request, 'index.html')
 
-def home(request):
+# Part of Page
 
-    return render(request, 'components/home.html')
+def header(request):
+
+    return render(request, 'components/jumbotron.html')
+
+def navbar(request):
+
+    return render(request, 'components/navbar.html')
