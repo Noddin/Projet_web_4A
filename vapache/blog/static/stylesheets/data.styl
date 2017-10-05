@@ -34,8 +34,14 @@ main-font = lemonmilkregular
 main-font-light = lemonmilk_lightregular
 
 //Transition Function
-//background color
-transition(type, time)
+transition(time)
+  -webkit-transition time /* Safari, Chrome and Opera > 12.1 */
+  -moz-transition time /* Firefox < 16 */
+  -ms-transition time /* Internet Explorer */
+  -o-transition time /* Opera < 12.1 */
+  transition time
+      //background color
+transitionType(type, time)
   -webkit-transition type time /* Safari, Chrome and Opera > 12.1 */
   -moz-transition type time /* Firefox < 16 */
   -ms-transition type time /* Internet Explorer */
