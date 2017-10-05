@@ -1,9 +1,43 @@
-red-light= #e4848d
-red = #d74854
-red-dark = #c3303d
-  
+//Dimension
 xs-max = 768px
 sm-max = 970px
 md-max = 1170px
 
-font = sans-serif
+//Colors
+
+white = #fff
+grey = #444
+black = #000
+wine = #5d193d
+orange = #fc8f0f
+beige = #ebd4ae
+
+//Fonts
+
+//main-font
+@font-face
+  font-family: 'lemonmilkregular';
+  src: url('fonts/lemonmilk-webfont.woff2') format('woff2'),
+    url('fonts/lemonmilk-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+
+//main-font-light
+@font-face
+  font-family: 'lemonmilk_lightregular';
+  src: url('fonts/lemonmilklight-webfont.woff2') format('woff2'),
+       url('fonts/lemonmilklight-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+
+main-font = lemonmilkregular
+main-font-light = lemonmilk_lightregular
+
+//Transition Function
+//background color
+transition(type, time)
+  -webkit-transition type time /* Safari, Chrome and Opera > 12.1 */
+  -moz-transition type time /* Firefox < 16 */
+  -ms-transition type time /* Internet Explorer */
+  -o-transition type time /* Opera < 12.1 */
+  transition type time

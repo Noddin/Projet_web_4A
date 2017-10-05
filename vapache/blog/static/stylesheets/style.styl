@@ -1,17 +1,49 @@
 @require "./data.styl"
 
+body
+  background-color grey
+
 .jumbotron
-  background-color  red
+  background-color  wine
+  border-radius 0
   margin 0em
+  font-family main-font
+  padding 2em 3em
+  h1
+    color white
+    font-size 4em
+  p
+    color orange
+    font-size 1.25em
 
 .container
-  background-color red-light
+  background-color white
+  padding 0
 
-.navbar
-  ul
-    display flex
-    flex-direction row
-    justify-content space-around
-    background-color red-light
-    :focus
-      background-color red
+//Navigation bar
+
+.navbar-bar
+  display flex
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  background-color: beige;
+  li
+    & a
+      font-family main-font-light
+      display block
+      color black
+      padding 0.5em 2em
+      text-decoration none
+      font-size 1em
+      transition(background-color, .5s)
+      @media(max-width xs-max)
+        font-size 0.8em
+        padding 0.5em 0.5em
+      &.active
+        background-color orange
+        color white
+        font-weight: bold;
+      &:hover:not(.active)
+        background-color grey
+        color white
