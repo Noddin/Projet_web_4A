@@ -3,6 +3,14 @@
 //General
 body
   background-color grey
+  background-image url("/static/img/background-image-min.jpeg")
+  background-repeat no-repeat
+  background-attachment fixed
+  background-position center
+  background-size cover
+  @media(max-width xs-max)
+    background-image none
+
 
 //Header
 .jumbotron
@@ -68,3 +76,6 @@ body
 .container
   background-color white
   padding 0
+
+.content
+  padding: 2em 1.5em

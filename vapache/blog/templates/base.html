@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{% block title %}Vapache{% endblock %}</title>
+    <link href="{% static 'bootstrap/css/bootstrap.css' %}" rel="stylesheet" media="screen">
+
+    <link rel="stylesheet" href="{% static 'stylesheets/style.css'%}">
+  </head>
+  <body>
+    <div class="container">
+
+      <img class="logo" src="/static/img/logo.png">
+      <div class="jumbotron">
+        <h1>Vapache</h1>
+        <p>Meilleur Blog sur les e-Cigarettes</p>
+      </div>
+
+      <ul class="navbar-bar">
+        <li><a class="active" href="/blog/accueil">Accueil</a></li>
+        <li><a href="/blog/articles">Articles</a></li>
+        <li><a href="#">Page 2</a></li>
+        <li><a href="#">Page 3</a></li>
+      </ul>
+
+      <div class="content">
+        {% block content %}{% endblock %}
+      </div>
+    </div>
+  </body>
+</html>

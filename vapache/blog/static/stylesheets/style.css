@@ -12,6 +12,16 @@
 }
 body {
   background-color: #444;
+  background-image: url("/static/img/background-image-min.jpeg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+}
+@media (max-width: 768px) {
+  body {
+    background-image: none;
+  }
 }
 .jumbotron {
   background-color: #5d193d;
@@ -91,4 +101,7 @@ body {
 .container {
   background-color: #fff;
   padding: 0;
+}
+.content {
+  padding: 2em 1.5em;
 }
