@@ -1,12 +1,12 @@
 @font-face {
   font-family: 'lemonmilkregular';
-  src: url("fonts/lemonmilk-webfont.woff2") format('woff2'), url("fonts/lemonmilk-webfont.woff") format('woff');
+  src: url("/static/fonts/lemonmilk-webfont.woff2") format('woff2'), url("/static/fonts/lemonmilk-webfont.woff") format('woff');
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
   font-family: 'lemonmilk_lightregular';
-  src: url("fonts/lemonmilklight-webfont.woff2") format('woff2'), url("fonts/lemonmilklight-webfont.woff") format('woff');
+  src: url("/static/fonts/lemonmilklight-webfont.woff2") format('woff2'), url("/static/fonts/lemonmilklight-webfont.woff") format('woff');
   font-weight: normal;
   font-style: normal;
 }
@@ -29,15 +29,29 @@ body {
   font-size: 1.25em;
   margin: 0;
 }
-@media (max-width: 768px) {
+@media (max-width: 970px) {
   .jumbotron {
-    padding: 1em 2em;
+    padding: 1em;
   }
+}
+@media (max-width: 768px) {
   .jumbotron h1 {
     font-size: 2em;
   }
   .jumbotron p {
     font-size: 0.7em;
+  }
+}
+.logo {
+  float: left;
+  padding: 1em;
+  height: 9.5em;
+  margin: 0;
+  width: auto;
+}
+@media (max-width: 970px) {
+  .logo {
+    display: none;
   }
 }
 .navbar-bar {
