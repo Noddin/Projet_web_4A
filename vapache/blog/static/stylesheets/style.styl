@@ -14,6 +14,7 @@ body
 h1
   color white
   font-size 4em
+  margin: 0
 
 h2, h3
   background-color orange
@@ -44,23 +45,24 @@ text, a
   margin 0em
   font-family main-font
   padding 1.5em 3em
-  text-align center
+  text-align left
   p
     color orange
     font-size 1.25em
     margin 0
-  @media(max-width sm-max)
-    padding 1em
   @media(max-width xs-max)
+    padding 1em
+    text-align center
     h1
-      font-size 2em
+      font-size 2.5em
     p
-      font-size 0.7em
+      font-size .8em
 
 //logo dimension
 .logo
   float right
   padding 1em
+  padding-right 4em
   height 9.5em
   margin 0
   width auto
@@ -85,15 +87,24 @@ text, a
       font-size 1em
       transition(.25s)
       @media(max-width xs-max)
-        font-size 0.7em
-        padding 0.5em 0.7em
+        font-size 1.25em
+        padding 0.15em 0.5em 0.05em 0.5em
       &.active
         background-color orange
         color white
         font-weight: bold;
+        @media(max-width xs-max)
+          background-color beige
+          color orange
       &:hover:not(.active)
         background-color grey
         color white
+  @media(max-width xs-max)
+    justify-content space-around
+
+.navbar-menu-tag
+  @media(max-width xs-max)
+    display none
 
 //Body
 .container
@@ -101,7 +112,7 @@ text, a
   padding 0
 
 .content
-  padding: 2em 1.5em
+  padding: 1em 1.5em 2em 1.5em
   @media(max-width xs-max)
     padding: .5em
 
