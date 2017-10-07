@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 from __future__ import unicode_literals
 from django.http import HttpResponse
-from django.shortcuts import render
+from django.shortcuts import render, get_object_or_404
 from blog.models import Article
 
 # Create your views here.
@@ -15,7 +15,7 @@ def articles(request):
     articles = Article.objects.all()
     return render(request, 'articles.html', {'derniers_articles': articles})
 
-def lire(request, id):
+def article(request, id):
     """ Afficher un article complet """
     article = get_object_or_404(Article, id=id)
-    return render(request, 'blog/lire.html', {'article': article})
+    return render(request, 'article.html', {'article': article})

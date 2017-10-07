@@ -5,8 +5,8 @@ from . import views
 urlpatterns = [
 
     url(r'^index$', views.index),
-    url(r'^accueil$', views.home),
-    url(r'^articles$', views.articles),
-    url(r'^article/(\d+)$', views.lire, name='lire')
+    url(r'^accueil$', views.home, name='accueil'),
+    url(r'^articles$', views.articles, name='articles'),
+    url(r'^article/(\d+)$', views.article, name='article')
 
 ]

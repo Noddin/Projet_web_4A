@@ -1,20 +1,20 @@
 {% extends "base.html" %}
 {% block content %}
-{% for article in derniers_articles %}
+<div class="row">
+  {% for article in derniers_articles %}
 
-    <div class="col-lg-4">
+      <div class="col-md-4">
 
-        <h3>{{ article.titre }}</h3>
+          <h3>{{ article.titre }}</h3>
 
-        <p>{{ article.contenu}}</p>
+          <text>{{ article.contenu|truncatewords_html:40 }}</text>
+          <br>
+          <a style="text-align:right;" href="{% url 'article' article.id %}">Lire la suite</a>
 
-        <p><a href="{% url 'lire' article.id %}">Lire la suite</a>
+      </div>
 
-    </div>
-
-{% empty %}
-
-    <p>Aucun article.</p>
-
-{% endfor %}
+  {% empty %}
+      <p>Aucun article.</p>
+  {% endfor %}
+</div>
 {% endblock %}

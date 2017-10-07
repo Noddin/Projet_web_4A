@@ -11,6 +11,31 @@ body
   @media(max-width xs-max)
     background-image none
 
+h1
+  color white
+  font-size 4em
+
+h2, h3
+  background-color orange
+  color white
+  font-family main-font
+  padding: 0.5em
+
+h2
+  font-size: 2em
+  @media(max-width xs-max)
+    font-size: 1.25em
+
+h3
+  font-size: 1.5em
+  @media(max-width xs-max)
+    font-size: 1em
+
+text, a
+  text-align justify
+  font-size 1em
+  @media(max-width xs-max)
+    font-size .8em
 
 //Header
 .jumbotron
@@ -19,9 +44,7 @@ body
   margin 0em
   font-family main-font
   padding 1.5em 3em
-  h1
-    color white
-    font-size 4em
+  text-align center
   p
     color orange
     font-size 1.25em
@@ -36,9 +59,9 @@ body
 
 //logo dimension
 .logo
-  float left
+  float right
   padding 1em
-  height: 9.5em
+  height 9.5em
   margin 0
   width auto
   @media(max-width sm-max)
@@ -60,7 +83,7 @@ body
       padding 0.5em 2em
       text-decoration none
       font-size 1em
-      transition(.5s)
+      transition(.25s)
       @media(max-width xs-max)
         font-size 0.7em
         padding 0.5em 0.7em
@@ -79,3 +102,8 @@ body
 
 .content
   padding: 2em 1.5em
+  @media(max-width xs-max)
+    padding: .5em
+
+//Tout les articles
+//Un Article

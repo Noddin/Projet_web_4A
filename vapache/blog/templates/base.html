@@ -5,9 +5,10 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>{% block title %}Vapache{% endblock %}</title>
-    <link href="{% static 'bootstrap/css/bootstrap.css' %}" rel="stylesheet" media="screen">
-
+    <link href="{% static 'bootstrap/css/bootstrap.min.css' %}" rel="stylesheet" media="screen">
     <link rel="stylesheet" href="{% static 'stylesheets/style.css'%}">
+    <script src="{% static 'bootstrap/js/bootstrap.min.js' %}"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   </head>
   <body>
     <div class="container">
@@ -17,15 +18,16 @@
         <h1>Vapache</h1>
         <p>Meilleur Blog sur les e-Cigarettes</p>
       </div>
-
+      {% block nav-bar %}
       <ul class="navbar-bar">
-        <li><a class="active" href="/blog/accueil">Accueil</a></li>
+        <li><a class="active" href="/blog/accueil"><span class="glyphicon glyphicon-home"></span>Accueil</a></li>
         <li><a href="/blog/articles">Articles</a></li>
-        <li><a href="#">Page 2</a></li>
-        <li><a href="#">Page 3</a></li>
+        <li><a href="#">Ajouter</a></li>
+        <li><a href="#">Suprimer</a></li>
       </ul>
-
+      {% endblock %}
       <div class="content">
+        {% block subtitle %}{% endblock %}
         {% block content %}{% endblock %}
       </div>
     </div>
