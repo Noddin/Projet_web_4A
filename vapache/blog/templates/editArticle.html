@@ -1,8 +1,11 @@
 {% extends "base.html" %}
 {% block content %}
-  <form action="{% url "editArticle" article.id %}" method="post">
+<div class="col-sm-1 col-md-2"></div>
+<div class="col-xs-12 col-sm-10 col-md-8">
+  <form class="article-form" action="{% url "editArticle" article.id %}" method="post">
     {% csrf_token %}
     {{ form.as_p }}
     <input type="submit" value="Envoyer" />
   </form>
+</div>
 {% endblock %}

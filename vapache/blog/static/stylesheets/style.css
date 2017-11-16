@@ -33,7 +33,7 @@ h3 {
   background-color: #fc8f0f;
   color: #fff;
   font-family: lemonmilkregular;
-  padding: 0.5em;
+  padding: 0.25em 0.5em;
 }
 h2 {
   font-size: 2em;
@@ -65,9 +65,9 @@ a {
 .jumbotron {
   background-color: #5d193d;
   border-radius: 0;
-  margin: 0em;
+  margin: 0;
   font-family: lemonmilkregular;
-  padding: 5em 0 3em 0;
+  padding: 6.5em 0 1.5em 0;
   text-align: left;
 }
 .jumbotron p {
@@ -159,6 +159,11 @@ a {
   padding: 0;
   min-height: 94vh;
 }
+@media (max-width: 768px) {
+  .container {
+    background-color: #fff;
+  }
+}
 .content {
   padding: 1em 1.5em 2em 1.5em;
 }
@@ -174,6 +179,11 @@ a {
   background-color: #000;
   color: #ebd4ae;
   text-align: center;
+}
+@media (max-width: 768px) {
+  .feet {
+    font-size: 0.75em;
+  }
 }
 .article-content {
   text-align: justify;
@@ -191,11 +201,16 @@ a {
   font-size: 1.2em;
   font-family: lemonmilk_lightregular;
   border-style: none;
-  padding: 0.05em 0.3em;
+  padding: 0.05em 0.5em;
   -webkit-transition: 0.15s /* Safari, Chrome and Opera > 12.1 */;
   -moz-transition: 0.15s /* Firefox < 16 */;
   -ms-transition: 0.15s /* Internet Explorer */;
   -o-transition: 0.15s /* Opera < 12.1 */;
+}
+@media (max-width: 768px) {
+  .article-read-more {
+    font-size: 1em;
+  }
 }
 .article-read-more:hover {
   background-color: #fc8f0f;
@@ -224,4 +239,31 @@ a {
 }
 .article-button:focus {
   color: #fff;
+}
+.article-form {
+  padding-top: 1em;
+}
+.article-form label {
+  font-family: lemonmilk_lightregular;
+  color: #444;
+}
+.article-form input[type=text],
+.article-form textarea {
+  width: 100%;
+}
+.article-form input[type=submit] {
+  font-family: lemonmilk_lightregular;
+  background-color: #444;
+  color: #fff;
+  border: none;
+  font-size: 1.2em;
+  padding: 0.5em 1em 0.25em 1em;
+  -webkit-transition: 0.15s /* Safari, Chrome and Opera > 12.1 */;
+  -moz-transition: 0.15s /* Firefox < 16 */;
+  -ms-transition: 0.15s /* Internet Explorer */;
+  -o-transition: 0.15s /* Opera < 12.1 */;
+}
+.article-form input[type=submit]:hover {
+  background-color: #fc8f0f;
+  color: #5d193d;
 }
