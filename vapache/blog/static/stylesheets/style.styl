@@ -99,6 +99,9 @@ text, a
       &:hover:not(.active)
         background-color grey
         color white
+      &:focus
+        background-color beige
+        color orange
   @media(max-width xs-max)
     justify-content space-around
 
@@ -116,16 +119,36 @@ text, a
   @media(max-width xs-max)
     padding: .5em
 
-.edit-button
-  float right
-  color white
+.article-footer
+  display flex
+  flex-direction: row-reverse;
+  align-items:flex-end;
+  justify-content space-between
+
+.article-read-more
+  color orange
   font-size: 1.2em
-  background-color grey
+  font-family: main-font-light
   border-style none
-  border-radius: 50%
-  padding .2em .5em
+  padding .2em 0
+  transition(.25s)
   &:hover
-    background-color orange
-    color beige
+    color wine
+
+.article-button
+  color white
+  background-color orange
+  border-radius 50%
+  font-size: 1.2em
+  font-family: main-font-light
+  border-style none
+  padding .5em .5em .3em .45em
+  margin-left: .25em
+  transition(.25s)
+  &:hover
+    background-color wine
+    color orange
+  &:focus
+    color white
 //Tout les articles
 //Un Article
