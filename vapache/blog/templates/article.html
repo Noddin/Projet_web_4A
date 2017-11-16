@@ -4,7 +4,11 @@
 {% endblock %}
 {% block content %}
 
-<p class="article-infos">{{ article.date|date:"DATE_FORMAT" }}</p>
+<p class="article-infos">
+  {{ article.date|date:"DATE_FORMAT" }}
+</p>
 
-<div class="article-contenu">{{ article.contenu|linebreaks }}</div>
+<div class="article-content">
+  {{ article.contenu|linebreaks }}
+</div>
 {% endblock %}

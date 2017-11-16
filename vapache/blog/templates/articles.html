@@ -6,8 +6,9 @@
       <div class="col-md-4">
 
           <h3>{{ article.titre }}</h3>
-
-          <text>{{ article.contenu|truncatewords_html:40 }}</text>
+          <div class="article-content">
+            {{ article.contenu|truncatewords_html:40 }}
+          </div>
           <br>
           <div class="article-footer">
             <div class="article-buttons">
