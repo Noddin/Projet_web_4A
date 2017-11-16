@@ -3,7 +3,7 @@
 //General
 body
   background-color grey
-  background-image url("/static/img/background-image-min.jpeg")
+  background-image url("/static/img/body-background.png")
   background-repeat no-repeat
   background-attachment fixed
   background-position center
@@ -44,7 +44,7 @@ text, a
   border-radius 0
   margin 0em
   font-family main-font
-  padding 1.5em 3em
+  padding 5em 0 3em 0
   text-align left
   p
     color orange
@@ -63,7 +63,7 @@ text, a
   float right
   padding 1em
   padding-right 4em
-  height 9.5em
+  height 14em
   margin 0
   width auto
   @media(max-width sm-max)
@@ -111,19 +111,27 @@ text, a
 
 //Body
 .container
-  background-color white
+  background-color rgba(255, 255, 255, 0.85)
   padding 0
-  min-height: 100vh;
+  min-height: 94vh;
 
 .content
   padding: 1em 1.5em 2em 1.5em
   @media(max-width xs-max)
     padding: .5em
 
+.feet
+  padding .25em 0
+  font-family main-font-light
+  font-size 1.5em
+  background-color: black
+  color beige
+  text-align: center;
+
 //Articles
 .article-content
   text-align justify
-  
+
 .article-footer
   display flex
   flex-direction row-reverse
