@@ -11,7 +11,7 @@
           <br>
           <div class="article-footer">
             <div class="article-buttons">
-              <a href="{% url 'editArticle' article.id %}" class="article-button" type="button" name="button"><span class="glyphicon glyphicon-trash"></span></a>
+              <a href="{% url 'deleteArticle' article.id %}" class="article-button" type="button" name="button"><span class="glyphicon glyphicon-trash"></span></a>
               <a href="{% url 'editArticle' article.id %}" class="article-button" type="button" name="button"><span class="glyphicon glyphicon-edit"></span></a>
             </div>
             <a href="{% url 'article' article.id %}" class="article-read-more">Lire la suite</a>

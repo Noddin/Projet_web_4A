@@ -16,9 +16,9 @@ def articles(request):
     articles = Article.objects.all()
     return render(request, 'articles.html', {'derniers_articles': articles})
 
-def article(request, titre):
+def article(request, id):
     """ Afficher un article complet """
-    article = get_object_or_404(Article, titre=titre)
+    article = get_object_or_404(Article, id=id)
     return render(request, 'article.html', {'article': article})
 
 def addArticle(request):
@@ -33,3 +33,8 @@ def editArticle(request, id):
     if form.is_valid():
         form.save()
     return render(request, 'editArticle.html', locals())
+
+def deleteArticle(request,id):
+   article = get_object_or_404(Article, id=id)
+   article.delete()
+   return render(request, 'deleteArticle.html', locals())
