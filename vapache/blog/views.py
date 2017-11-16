@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 from __future__ import unicode_literals
-from django.http import HttpResponse
-from django.shortcuts import render, get_object_or_404
+from django.http import HttpResponse, HttpResponseRedirect
+from django.shortcuts import render, redirect, get_object_or_404
 from blog.models import Article
 from .forms import ContactForm, ArticleForm
 
@@ -25,6 +25,7 @@ def addArticle(request):
     form = ArticleForm(request.POST or None)
     if form.is_valid():
         form.save()
+        return redirect(articles)
     return render(request, 'addArticle.html', locals())
 
 def editArticle(request, id):
@@ -32,9 +33,10 @@ def editArticle(request, id):
     form = ArticleForm(request.POST or None, instance=article)
     if form.is_valid():
         form.save()
+        return redirect(articles)
     return render(request, 'editArticle.html', locals())
 
 def deleteArticle(request,id):
    article = get_object_or_404(Article, id=id)
    article.delete()
-   return render(request, 'deleteArticle.html', locals())
+   return redirect(articles)
