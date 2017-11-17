@@ -37,6 +37,5 @@ def editArticle(request, id):
     return render(request, 'editArticle.html', locals())
 
 def deleteArticle(request,id):
-   article = get_object_or_404(Article, id=id)
-   article.delete()
+   article = get_object_or_404(Article, id=id).delete()
    return redirect(articles)
